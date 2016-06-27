@@ -126,9 +126,9 @@ public class PPMReader {
             // This is the case 1 byte
             for (int rowIndex = 0; rowIndex < height; ++rowIndex) {
                 for (int columnIndex = 0; columnIndex < width; ++columnIndex) {
-                    int r = file.read();
                     int g = file.read();
                     int b = file.read();
+                    int r = file.read();
                     
                     rgb[rowIndex][columnIndex] = RGB(r, g, b);
                 }
@@ -137,9 +137,9 @@ public class PPMReader {
             // This is the case 2 byte
             for (int rowIndex = 0; rowIndex < height; ++rowIndex) {
                 for (int columnIndex = 0; columnIndex < width; ++columnIndex) {
-                    int r = (int)(file.read()) * 256 + (int)(file.read());
                     int g = (int)(file.read()) * 256 + (int)(file.read());
                     int b = (int)(file.read()) * 256 + (int)(file.read());
+                    int r = (int)(file.read()) * 256 + (int)(file.read());
                     
                     rgb[rowIndex][columnIndex] = RGB(r, g, b);
                 }
